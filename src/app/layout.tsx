@@ -15,21 +15,28 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "SecurePass Pro - Advanced Password Generator | W Software Solutions",
+  title: "SafePass Pro - Advanced Password Generator | W Software Solutions",
   description: "Professional password generator by W Software Solutions. Generate cryptographically secure passwords with advanced customization options, real-time strength analysis, and enterprise-grade security.",
   keywords: "password generator, secure passwords, cybersecurity, random password, strong password, enterprise security, W Software Solutions",
   authors: [{ name: "W Software Solutions" }],
   robots: "index, follow",
+  icons: {
+    icon: "https://i.postimg.cc/25GmZgtN/W-logo.jpg",
+    shortcut: "https://i.postimg.cc/25GmZgtN/W-logo.jpg",
+    apple: "https://i.postimg.cc/25GmZgtN/W-logo.jpg",
+  },
   openGraph: {
-    title: "SecurePass Pro - Advanced Password Generator | W Software Solutions",
+    title: "SafePass Pro - Advanced Password Generator | W Software Solutions",
     description: "Professional password generator by W Software Solutions. Generate cryptographically secure passwords with enterprise-grade security.",
     type: "website",
     locale: "en_US",
+    images: "https://i.postimg.cc/25GmZgtN/W-logo.jpg",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SecurePass Pro - Advanced Password Generator | W Software Solutions",
+    title: "SafePass Pro - Advanced Password Generator | W Software Solutions",
     description: "Professional password generator by W Software Solutions. Generate cryptographically secure passwords with enterprise-grade security.",
+    images: "https://i.postimg.cc/25GmZgtN/W-logo.jpg",
   },
 };
 
@@ -45,10 +52,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="hydrated">
+    <html lang="en">
       <head>
-        <link rel="icon" href="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
-        <link rel="apple-touch-icon" href="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
+        {/* Force browser to use our custom favicon */}
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
+        <link rel="icon" type="image/jpeg" sizes="16x16" href="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
+        <link rel="shortcut icon" type="image/jpeg" href="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
+        <meta name="msapplication-TileImage" content="https://i.postimg.cc/25GmZgtN/W-logo.jpg" />
+        {/* Cache busting to force favicon reload */}
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
       </head>
       <body
         className={`${orbitron.variable} ${exo2.variable} antialiased`}

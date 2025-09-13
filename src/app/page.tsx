@@ -74,7 +74,7 @@ export default function Home() {
               W SOFTWARE SOLUTIONS
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mb-2 font-['Orbitron'] tracking-wider">
-              SecurePass Pro
+              SafePass Pro
             </h1>
             <p className="text-lg md:text-xl text-blue-300 font-light tracking-wide">
               Enterprise-Grade Password Generator
